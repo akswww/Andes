@@ -1,0 +1,69 @@
+PODS:
+  - Charts (4.1.0):
+    - Charts/Core (= 4.1.0)
+  - Charts/Core (4.1.0):
+    - SwiftAlgorithms (~> 1.0)
+  - CryptoSwift (1.8.0)
+  - lottie-ios (4.2.0)
+  - MaterialComponents/AnimationTiming (124.2.0)
+  - MaterialComponents/Availability (124.2.0)
+  - MaterialComponents/private/Math (124.2.0)
+  - "MaterialComponents/private/TextControlsPrivate+BaseStyle (124.2.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/private/TextControlsPrivate+OutlinedStyle (124.2.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/private/TextControlsPrivate+Shared (124.2.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - "MaterialComponents/TextControls+Enums"
+  - "MaterialComponents/private/TextControlsPrivate+TextFields (124.2.0)":
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/TextControls+BaseTextFields (124.2.0)":
+    - "MaterialComponents/private/TextControlsPrivate+BaseStyle"
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+    - "MaterialComponents/private/TextControlsPrivate+TextFields"
+    - MDFInternationalization
+  - "MaterialComponents/TextControls+Enums (124.2.0)"
+  - "MaterialComponents/TextControls+OutlinedTextFields (124.2.0)":
+    - MaterialComponents/Availability
+    - "MaterialComponents/private/TextControlsPrivate+OutlinedStyle"
+    - "MaterialComponents/TextControls+BaseTextFields"
+  - MDFInternationalization (3.0.0)
+  - ProgressHUD (13.7.2)
+  - SwiftAlgorithms (1.0.0)
+
+DEPENDENCIES:
+  - Charts (= 4.1.0)
+  - CryptoSwift (= 1.8.0)
+  - lottie-ios (= 4.2.0)
+  - "MaterialComponents/TextControls+OutlinedTextFields (= 124.2.0)"
+  - ProgressHUD (= 13.7.2)
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - CryptoSwift
+    - lottie-ios
+    - MaterialComponents
+    - MDFInternationalization
+    - ProgressHUD
+    - SwiftAlgorithms
+
+SPEC CHECKSUMS:
+  Charts: ce0768268078eee0336f122c3c4ca248e4e204c5
+  CryptoSwift: 52aaf3fce7337552863b1d952e408085f0e65030
+  lottie-ios: 809ecf2d460ed650a6aed7aa88b2ec45fab4779c
+  MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
+  MDFInternationalization: d697c55307816222a55685c4ccb1044ffb030c12
+  ProgressHUD: 093d24ca970f191744017bee2649e37d0cd1c5b9
+  SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
+
+PODFILE CHECKSUM: ec73785893b7a70992ebde545f2f4b0df861c3a0
+
+COCOAPODS: 1.15.2

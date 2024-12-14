@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserInfoViewController" customModule="AndesCompetition" customModuleProvider="target">
+            <connections>
+                <outlet property="InfoTb" destination="7G2-bS-cMV" id="eJS-2b-sku"/>
+                <outlet property="animateBackgroundView" destination="InX-Pv-XTi" id="Hns-e3-yZo"/>
+                <outlet property="goNextbtn" destination="urY-5C-ElL" id="tIf-Er-Pza"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="InX-Pv-XTi">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7G2-bS-cMV">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" systemColor="systemFillColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urY-5C-ElL">
+                    <rect key="frame" x="118" y="765" width="157" height="53"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="繼續"/>
+                    <connections>
+                        <action selector="sendInfo:" destination="-1" eventType="touchUpInside" id="AJe-P0-3J2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="urY-5C-ElL" secondAttribute="bottom" id="21K-1n-kiL"/>
+                <constraint firstItem="InX-Pv-XTi" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="AfT-8T-0Rc"/>
+                <constraint firstItem="InX-Pv-XTi" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="C34-jr-FGl"/>
+                <constraint firstItem="urY-5C-ElL" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.4" id="CzV-1b-d1r"/>
+                <constraint firstItem="InX-Pv-XTi" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="DFz-5I-PVk"/>
+                <constraint firstItem="7G2-bS-cMV" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="KgK-Vq-GBu"/>
+                <constraint firstItem="7G2-bS-cMV" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="L8c-WI-yIL"/>
+                <constraint firstItem="InX-Pv-XTi" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="aUp-hE-te9"/>
+                <constraint firstItem="7G2-bS-cMV" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="bkL-Ro-uq7"/>
+                <constraint firstItem="urY-5C-ElL" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="cj3-sC-U3M"/>
+                <constraint firstItem="urY-5C-ElL" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.07" id="ipx-Is-t3e"/>
+                <constraint firstItem="7G2-bS-cMV" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="mMq-61-bUV"/>
+            </constraints>
+            <point key="canvasLocation" x="127" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
