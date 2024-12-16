@@ -1,5 +1,6 @@
 import UIKit
 import AVFoundation
+import Vision
 
 class PhoteViewController: UIViewController {
     
@@ -8,6 +9,7 @@ class PhoteViewController: UIViewController {
     
     let manager = NetworkManager()
     struct PhoteRequest: Codable {
+        var name: String
         var image: String
     }
     
@@ -85,32 +87,95 @@ class PhoteViewController: UIViewController {
 
 extension PhoteViewController: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput,
-                    didFinishProcessingPhoto photo: AVCapturePhoto,
-                    error: Error?) {
+                     didFinishProcessingPhoto photo: AVCapturePhoto,
+                     error: Error?) {
         
+        // 確保有正確的影像資料
         guard let imageData = photo.fileDataRepresentation(),
               let image = UIImage(data: imageData) else { return }
         
-       
-        
-//        UIGraphicsBeginImageContextWithOptions(targetSize, false, 1.0)
-//        image.draw(in: CGRect(origin: .zero, size: targetSize))
-        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        guard let resizedImageData = resizedImage?.jpegData(compressionQuality: 1) else { return }
-        let base64String = resizedImageData.base64EncodedString()
-        print(base64String)
-        let request: PhoteRequest = PhoteRequest(image: base64String)
-        UserPreferences.shared.photebinary = base64String
-        dismiss(animated: true)
-        Task {
-            let result: BaseReponse = try await manager.requestData(method: .post, path: .UserInfo, parameters: request)
-            print(result)
+        // 透過 Vision 偵測臉部，裁切圖片
+        cropFaceFromImage(image) { [self] croppedImage in
+            guard let croppedImage = croppedImage else { return }
             
+            // 壓縮圖片為 JPEG 格式
+            guard let resizedImageData = croppedImage.jpegData(compressionQuality: 1) else { return }
+            let base64String = resizedImageData.base64EncodedString()
+            
+            // 打印 Base64 編碼的圖片字串
+            print(base64String)
+            
+            let request: PhoteRequest = PhoteRequest(name: "admit1", image: base64String)
+            UserPreferences.shared.photebinary = base64String
+            
+            Task {
+                do {
+                    // 發送請求到伺服器
+                    let result: BaseReponse = try await manager.requestData(method: .post, path: .UserInfo, parameters: request)
+                    print(result)
+                    self.dismiss(animated: true)
+                } catch {
+                    print("Error sending request:", error)
+                }
+            }
         }
     }
-
+    
+    /// 使用 Vision 框住臉部並裁切圖片
+    private func cropFaceFromImage(_ image: UIImage, completion: @escaping (UIImage?) -> Void) {
+        guard let cgImage = image.cgImage else {
+            completion(nil)
+            return
+        }
+        
+        let request = VNDetectFaceRectanglesRequest { request, error in
+            guard error == nil else {
+                print("臉部偵測錯誤: \(error!.localizedDescription)")
+                completion(nil)
+                return
+            }
+            
+            // 確保有偵測到臉部
+            guard let results = request.results as? [VNFaceObservation], let firstFace = results.first else {
+                print("未檢測到臉部")
+                completion(nil)
+                return
+            }
+            
+            // 取得臉部的 bounding box
+            let boundingBox = firstFace.boundingBox
+            
+            // 將 bounding box 轉換為圖片的實際尺寸
+            let imageWidth = CGFloat(cgImage.width)
+            let imageHeight = CGFloat(cgImage.height)
+            
+            let cropRect = CGRect(
+                x: boundingBox.origin.x * imageWidth,
+                y: (1 - boundingBox.origin.y - boundingBox.size.height) * imageHeight,
+                width: boundingBox.size.width * imageWidth,
+                height: boundingBox.size.height * imageHeight
+            )
+            
+            // 切割圖片
+            if let croppedCgImage = cgImage.cropping(to: cropRect) {
+                let croppedImage = UIImage(cgImage: croppedCgImage, scale: image.scale, orientation: image.imageOrientation)
+                completion(croppedImage)
+            } else {
+                completion(nil)
+            }
+        }
+        
+        // 使用 Vision 處理圖片
+        let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+        DispatchQueue.global(qos: .userInitiated).async {
+            do {
+                try handler.perform([request])
+            } catch {
+                print("處理圖片時發生錯誤: \(error.localizedDescription)")
+                completion(nil)
+            }
+        }
+    }
 }
 
 

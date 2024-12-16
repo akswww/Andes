@@ -26,6 +26,19 @@ class UserPreferences {
         case photebinary
         case clinic
         case currentSelectedIndices
+        case usebiology
+        case account
+        case password
+    }
+    
+    var account: String {
+        get { return userPreferance.string( forKey: UserPreference.account.rawValue) ?? ""}
+        set { return userPreferance.set( newValue, forKey: UserPreference.account.rawValue)}
+    }
+    
+    var password: String {
+        get { return userPreferance.string( forKey: UserPreference.password.rawValue) ?? ""}
+        set { return userPreferance.set( newValue, forKey: UserPreference.password.rawValue)}
     }
     
     var name: String {
@@ -77,6 +90,7 @@ class UserPreferences {
         get { return userPreferance.stringArray( forKey: UserPreference.photebinary.rawValue) ?? []}
         set { return userPreferance.set( newValue, forKey: UserPreference.photebinary.rawValue)}
     }
+    
     var currentSelectedIndices: [Int] {
         get {
             return userPreferance.array(forKey: UserPreference.currentSelectedIndices.rawValue) as? [Int] ?? []
@@ -84,4 +98,9 @@ class UserPreferences {
         set { return userPreferance.set( newValue, forKey: UserPreference.currentSelectedIndices.rawValue)}
     }
 
+    var usebiology: Bool {
+        get { return userPreferance.bool( forKey: UserPreference.usebiology.rawValue)}
+        set { return userPreferance.set( newValue, forKey: UserPreference.usebiology.rawValue)}
+    }
+    
 }

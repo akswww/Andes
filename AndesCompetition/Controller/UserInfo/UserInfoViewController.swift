@@ -85,14 +85,8 @@ class UserInfoViewController: BaseViewController {
                                                        national_id: idcard!)
         Task {
             let result: BaseReponse = try await manager.requestData(method: .post, path: .UserInfo, parameters: request)
-            
+            if(result.result == 0) {
                 let vc = TabbarViewController()
-//                vc.name = name
-//                vc.tall = tall
-//                vc.genderStr = genderStr
-//                vc.birther = birther
-//                vc.idcard = idcard
-//                vc.weight = weight
                 UserPreferences.shared.name = name!
                 UserPreferences.shared.tall = String(tall!)
                 UserPreferences.shared.gender = genderStr!
@@ -100,12 +94,9 @@ class UserInfoViewController: BaseViewController {
                 UserPreferences.shared.idcard = idcard!
                 UserPreferences.shared.weight = String(weight!)
                 self.navigationController?.pushViewController(vc, animated: true)
-            
+            }
         }
 
-        
-        let vc = TabbarViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     

@@ -12,6 +12,9 @@
 		3F0A5C992D0AE1BA0022001E /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A5C962D0AE1BA0022001E /* PatientViewController.swift */; };
 		3F0A5CFA2D0C153A0022001E /* ScanQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A5CF82D0C153A0022001E /* ScanQRCodeViewController.swift */; };
 		3F0A5CFB2D0C153A0022001E /* ScanQRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F0A5CF92D0C153A0022001E /* ScanQRCodeViewController.xib */; };
+		3F0A5CFF2D10022B0022001E /* server.pem in Resources */ = {isa = PBXBuildFile; fileRef = 3F0A5CFE2D10022B0022001E /* server.pem */; };
+		3F0A5D012D1002E40022001E /* fullchain6.pem in Resources */ = {isa = PBXBuildFile; fileRef = 3F0A5D002D1002E40022001E /* fullchain6.pem */; };
+		3F0A5D032D1002FA0022001E /* privkey6.pem in Resources */ = {isa = PBXBuildFile; fileRef = 3F0A5D022D1002FA0022001E /* privkey6.pem */; };
 		3F19B9AE2C3E6DA400CDE7BE /* NFCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19B9AB2C3E6DA400CDE7BE /* NFCViewController.swift */; };
 		3F46BE872C73243100EDE99F /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46BE862C73243100EDE99F /* Login.swift */; };
 		3F46BE892C73243E00EDE99F /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46BE882C73243E00EDE99F /* Register.swift */; };
@@ -104,6 +107,9 @@
 		3F0A5C972D0AE1BA0022001E /* PatientViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientViewController.xib; sourceTree = "<group>"; };
 		3F0A5CF82D0C153A0022001E /* ScanQRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeViewController.swift; sourceTree = "<group>"; };
 		3F0A5CF92D0C153A0022001E /* ScanQRCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanQRCodeViewController.xib; sourceTree = "<group>"; };
+		3F0A5CFE2D10022B0022001E /* server.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = server.pem; sourceTree = "<group>"; };
+		3F0A5D002D1002E40022001E /* fullchain6.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = fullchain6.pem; sourceTree = "<group>"; };
+		3F0A5D022D1002FA0022001E /* privkey6.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = privkey6.pem; sourceTree = "<group>"; };
 		3F19B9AB2C3E6DA400CDE7BE /* NFCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCViewController.swift; sourceTree = "<group>"; };
 		3F19B9AC2C3E6DA400CDE7BE /* NFCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NFCViewController.xib; sourceTree = "<group>"; };
 		3F19B9AF2C3E6FBE00CDE7BE /* AndesCompetition.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AndesCompetition.entitlements; sourceTree = "<group>"; };
@@ -361,6 +367,9 @@
 				3F48B18E2C92C66300F1D81E /* DotBackgroundAnimate1.json */,
 				3FFD2AF12C560E350041CF03 /* DotBackgroundAnimate.json */,
 				3FC4D1F12C32EF4D00199D6E /* Assets.xcassets */,
+				3F0A5D002D1002E40022001E /* fullchain6.pem */,
+				3F0A5D022D1002FA0022001E /* privkey6.pem */,
+				3F0A5CFE2D10022B0022001E /* server.pem */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -623,7 +632,9 @@
 				3FA156222CBBAA8100959CB4 /* Assets.xcassets in Resources */,
 				3FE0BC442C846C3B00D2D7D7 /* UserInfoViewController.xib in Resources */,
 				3FDAD7BF2C92C78D00E7728A /* AIMapViewController.xib in Resources */,
+				3F0A5D032D1002FA0022001E /* privkey6.pem in Resources */,
 				3FE0BC452C846C3B00D2D7D7 /* NFCViewController.xib in Resources */,
+				3F0A5CFF2D10022B0022001E /* server.pem in Resources */,
 				3F48B18F2C92C66300F1D81E /* DotBackgroundAnimate1.json in Resources */,
 				3F5E95E52D0851840052055B /* PhoteViewController.xib in Resources */,
 				3FE0BC462C846C3B00D2D7D7 /* MainViewController.xib in Resources */,
@@ -631,6 +642,7 @@
 				3F48B1752C90547800F1D81E /* DoctorViewController.xib in Resources */,
 				3FE0BC472C846C3B00D2D7D7 /* TabbarViewController.xib in Resources */,
 				3F0A5C982D0AE1BA0022001E /* PatientViewController.xib in Resources */,
+				3F0A5D012D1002E40022001E /* fullchain6.pem in Resources */,
 				3FE0BC402C84601200D2D7D7 /* MainUserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -948,6 +960,7 @@
 				INFOPLIST_FILE = AndesCompetition/Info.plist;
 				INFOPLIST_KEY_NFCReaderUsageDescription = "我們需要使用NFC來讀取卡片資訊";
 				INFOPLIST_KEY_NSCameraUsageDescription = "需要使用相機來拍照";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "我們需要使用 Face ID 來快速驗證您的身份。";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要啟動麥克風";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "需要啟動麥克風";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -987,6 +1000,7 @@
 				INFOPLIST_FILE = AndesCompetition/Info.plist;
 				INFOPLIST_KEY_NFCReaderUsageDescription = "我們需要使用NFC來讀取卡片資訊";
 				INFOPLIST_KEY_NSCameraUsageDescription = "需要使用相機來拍照";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "我們需要使用 Face ID 來快速驗證您的身份。";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要啟動麥克風";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "需要啟動麥克風";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
