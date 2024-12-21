@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let rootVC = MainViewController(nibName: "MainViewController", bundle: nil)
+        let rootVC = EncrypViewController(nibName: "EncrypViewController", bundle: nil)
         let navigationController = UINavigationController(rootViewController: rootVC)
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene

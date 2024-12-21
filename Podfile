@@ -10,6 +10,7 @@ target 'AndesCompetition' do
 	pod 'ProgressHUD' , '13.7.2'
  	pod 'lottie-ios' , '4.2.0'
 	pod 'Charts' , '4.1.0'
+	pod 'SwiftyRSA'
 	pod 'MaterialComponents/TextControls+OutlinedTextFields', '124.2.0'
   target 'AndesCompetitionTests' do
     inherit! :search_paths

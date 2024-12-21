@@ -37,6 +37,9 @@ PODS:
   - MDFInternationalization (3.0.0)
   - ProgressHUD (13.7.2)
   - SwiftAlgorithms (1.0.0)
+  - SwiftyRSA (1.7.0):
+    - SwiftyRSA/ObjC (= 1.7.0)
+  - SwiftyRSA/ObjC (1.7.0)
 
 DEPENDENCIES:
   - Charts (= 4.1.0)
@@ -44,6 +47,7 @@ DEPENDENCIES:
   - lottie-ios (= 4.2.0)
   - "MaterialComponents/TextControls+OutlinedTextFields (= 124.2.0)"
   - ProgressHUD (= 13.7.2)
+  - SwiftyRSA
 
 SPEC REPOS:
   trunk:
@@ -54,6 +58,7 @@ SPEC REPOS:
     - MDFInternationalization
     - ProgressHUD
     - SwiftAlgorithms
+    - SwiftyRSA
 
 SPEC CHECKSUMS:
   Charts: ce0768268078eee0336f122c3c4ca248e4e204c5
@@ -63,7 +68,8 @@ SPEC CHECKSUMS:
   MDFInternationalization: d697c55307816222a55685c4ccb1044ffb030c12
   ProgressHUD: 093d24ca970f191744017bee2649e37d0cd1c5b9
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
+  SwiftyRSA: 8c6dd1ea7db1b8dc4fb517a202f88bb1354bc2c6
 
-PODFILE CHECKSUM: ec73785893b7a70992ebde545f2f4b0df861c3a0
+PODFILE CHECKSUM: a7c578f0da86303e6027cea2704a0489358029d2
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

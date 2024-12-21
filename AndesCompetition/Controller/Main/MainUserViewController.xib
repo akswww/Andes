@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,6 +13,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainUserViewController" customModule="AndesCompetition" customModuleProvider="target">
             <connections>
+                <outlet property="btnNFC" destination="c3b-Hu-pAb" id="HdY-X9-nPt"/>
+                <outlet property="btnQR" destination="8zl-sl-QOX" id="O1R-wU-LeH"/>
                 <outlet property="lbBirtherDay" destination="ggf-bG-pGj" id="kKY-Kj-yVG"/>
                 <outlet property="lbName" destination="hNs-Zp-bbm" id="pgK-bJ-mUj"/>
                 <outlet property="lbWeight" destination="AqX-Mu-PGt" id="2ZY-gf-OQ1"/>
@@ -99,6 +102,31 @@
                         <constraint firstItem="Wus-gB-7Hs" firstAttribute="height" secondItem="ErE-9x-VZC" secondAttribute="height" multiplier="0.65" id="pGq-wN-jfk"/>
                     </constraints>
                 </view>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Pg-SV-zZa">
+                    <rect key="frame" x="29" y="396.66666666666669" width="335" height="91"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3b-Hu-pAb">
+                            <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="91"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="NFC綁定" subtitle="">
+                                <imageReference key="image" image="wave.3.right" catalog="system" symbolScale="large" variableValue="1"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="toNFCvc:" destination="-1" eventType="touchUpInside" id="88Q-RB-ISd"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zl-sl-QOX">
+                            <rect key="frame" x="167.66666666666663" y="0.0" width="167.33333333333337" height="91"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="報到診間">
+                                <imageReference key="image" image="qrcode" catalog="system" symbolScale="large"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="toQRvc:" destination="-1" eventType="touchUpInside" id="SjJ-oD-D5D"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -108,15 +136,21 @@
                 <constraint firstItem="clI-A9-71t" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.3" id="E9c-RP-bs4"/>
                 <constraint firstItem="clI-A9-71t" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Elz-PP-PfO"/>
                 <constraint firstItem="ErE-9x-VZC" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Fw3-Xu-6et"/>
+                <constraint firstItem="0Pg-SV-zZa" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="GiP-6p-HZm"/>
                 <constraint firstItem="ErE-9x-VZC" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.852417" id="Thn-HO-WUj"/>
                 <constraint firstItem="ErE-9x-VZC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="42" id="Usu-yy-aHJ"/>
+                <constraint firstItem="0Pg-SV-zZa" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.119895" id="dA7-Ih-WIa"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="clI-A9-71t" secondAttribute="bottom" multiplier="1.1" id="lWT-vM-fYf"/>
+                <constraint firstItem="0Pg-SV-zZa" firstAttribute="top" secondItem="ErE-9x-VZC" secondAttribute="bottom" constant="30" id="qRh-uN-rbA"/>
+                <constraint firstItem="0Pg-SV-zZa" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.852417" id="rkP-ed-j2j"/>
             </constraints>
             <point key="canvasLocation" x="125.95419847328243" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
         <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
+        <image name="qrcode" catalog="system" width="128" height="114"/>
+        <image name="wave.3.right" catalog="system" width="83" height="128"/>
         <namedColor name="ThemeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

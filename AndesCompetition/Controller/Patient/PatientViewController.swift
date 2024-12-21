@@ -9,9 +9,10 @@ import UIKit
 import Lottie
 
 
-class PatientViewController: UIViewController {
+class PatientViewController: BaseViewController {
 
     @IBOutlet weak var vDOC: UIView!
+    
     @IBOutlet weak var tvDoc: UITextView!
     
     @IBOutlet weak var btnNext: UIButton!
@@ -26,7 +27,15 @@ class PatientViewController: UIViewController {
     
     weak var indexDelegate: Indexdelegate?
     
+    let manager = NetworkManager()
+    
     var index: Int!
+    
+    var firstFloor: [String] = []
+    
+    var secondFloor: [String] = []
+    
+    var threeFloor: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +47,6 @@ class PatientViewController: UIViewController {
         setLoginView()
         setupAnimate()
     }
-    
     
     func setTextView() {
         tvDoc.layer.borderWidth = 1.0
@@ -70,84 +78,97 @@ class PatientViewController: UIViewController {
     func showFloorSelection() {
         Alert.showActionSheetMultiSelect(array: ["一樓", "二樓", "三樓"], canceltitle: "確定", confirmTitle: "", vc: self) { confirm in
             self.handleFloorSelection(confirm)
-        } backAction: {
-            self.indexDelegate?.didSelectIndex(index: self.index)
-            self.dismiss(animated: true)
+        } backAction: { [self] in
+            print(firstFloor,secondFloor,threeFloor)
+            let request: ClinicRequest = ClinicRequest(appointment_clinic: Appointment_clinic(first: firstFloor, second: secondFloor, third: threeFloor))
+            
+            let medicalrequest: medicalRequest = medicalRequest(date: tvDoc.text ?? "")
+            Task {
+                let result: BaseReponse = try await manager.requestData(method: .post, path: .appoint, parameters: request)
+                if(result.result == 0) {
+                    let result: BaseReponse = try await manager.requestData(method: .post, path: .medical, parameters: medicalrequest)
+                    if(result.result == 0 ) {
+                        self.indexDelegate?.didSelectIndex(index: self.index)
+                        self.dismiss(animated: true)
+                    }
+                }
+            }
+   
         }
     }
 
     func handleFloorSelection(_ selection: Int) {
         switch selection {
         case 0:
-            Alert.showActionSheetMultiSelect(array: ["耳鼻喉科", "眼科", "嘴科"], canceltitle: "返回", confirmTitle: "", vc: self) { confirm in
+            Alert.showActionSheetMultiSelect(array: ["耳鼻喉科", "眼科", "嘴科"], canceltitle: "返回", confirmTitle: "", vc: self) { [self] confirm in
                 print(confirm.description)
                 if(confirm.description == "0") {
-                    if(UserPreferences.shared.clinic.contains("耳鼻喉科")) {
-                        UserPreferences.shared.clinic.removeAll(where: { $0 == "耳鼻喉科" })
+                    if((firstFloor.contains("耳鼻喉科"))) {
+                        firstFloor.removeAll(where: { $0 == "耳鼻喉科" })
                     } else {
-                        UserPreferences.shared.clinic.append("耳鼻喉科")
+                        firstFloor.append("耳鼻喉科")
                     }
                 } else if (confirm.description == "1") {
-                    if(UserPreferences.shared.clinic.contains("眼科")) {
-                        UserPreferences.shared.clinic.removeAll(where: { $0 == "眼科" })
+                    if((firstFloor.contains("眼科"))) {
+                        firstFloor.removeAll(where: { $0 == "眼科" })
                     } else {
-                        UserPreferences.shared.clinic.append("眼科")
+                        firstFloor.append("眼科")
                     }
                 } else if(confirm.description == "2") {
-                    if(UserPreferences.shared.clinic.contains("嘴科")) {
-                        UserPreferences.shared.clinic.removeAll(where: { $0 == "嘴科" })
+                    if((firstFloor.contains("嘴科"))) {
+                        firstFloor.removeAll(where: { $0 == "嘴科" })
                     } else {
-                        UserPreferences.shared.clinic.append("嘴科")
+                        firstFloor.append("嘴科")
                     }
                 }
-                print(UserPreferences.shared.clinic)
+                
             } backAction: {
                 self.showFloorSelection()
             }
 
         case 1:
-            Alert.showActionSheetMultiSelect(array: ["牙科", "內科", "外科"], canceltitle: "返回", confirmTitle: "", vc: self) { confirm in
+            Alert.showActionSheetMultiSelect(array: ["牙科", "內科", "外科"], canceltitle: "返回", confirmTitle: "", vc: self) { [self] confirm in
                 if(confirm.description == "0") {
-                    if(UserPreferences.shared.clinic.contains("牙科")) {
-                        UserPreferences.shared.clinic.removeAll(where: { $0 == "牙科" })
+                    if((secondFloor.contains("牙科"))) {
+                        secondFloor.removeAll(where: { $0 == "嘴科" })
                     } else {
-                        UserPreferences.shared.clinic.append("牙科")
+                        secondFloor.append("牙科")
                     }
                 } else if (confirm.description == "1") {
-                    if(UserPreferences.shared.clinic.contains("內科")) {
-                        UserPreferences.shared.clinic.removeAll(where: { $0 == "內科" })
+                    if((secondFloor.contains("內科"))) {
+                        secondFloor.removeAll(where: { $0 == "內科" })
                     } else {
-                        UserPreferences.shared.clinic.append("內科")
+                        secondFloor.append("內科")
                     }
                 } else if(confirm.description == "2") {
-                    if(UserPreferences.shared.clinic.contains("外科")) {
-                        UserPreferences.shared.clinic.removeAll(where: { $0 == "外科" })
+                    if((secondFloor.contains("外科"))) {
+                        secondFloor.removeAll(where: { $0 == "外科" })
                     } else {
-                        UserPreferences.shared.clinic.append("外科")
+                        secondFloor.append("外科")
                     }
                 }
             } backAction: {
                 self.showFloorSelection()
             }
         case 2:
-            Alert.showActionSheetMultiSelect(array: ["手科", "腳科", "腿科"], canceltitle: "返回", confirmTitle: "", vc: self) { confirm in
+            Alert.showActionSheetMultiSelect(array: ["手科", "腳科", "腿科"], canceltitle: "返回", confirmTitle: "", vc: self) { [self] confirm in
                 if(confirm.description == "0") {
-                    if(UserPreferences.shared.clinic.contains("手科")) {
-                        UserPreferences.shared.clinic.removeAll(where: { $0 == "手科" })
+                    if(threeFloor.contains("手科")) {
+                        threeFloor.removeAll(where: { $0 == "手科" })
                     } else {
-                        UserPreferences.shared.clinic.append("手科")
+                        threeFloor.append("手科")
                     }
                 } else if (confirm.description == "1") {
-                    if(UserPreferences.shared.clinic.contains("腳科")) {
-                        UserPreferences.shared.clinic.removeAll(where: { $0 == "腳科" })
+                    if((threeFloor.contains("腳科"))) {
+                        threeFloor.removeAll(where: { $0 == "腳科" })
                     } else {
-                        UserPreferences.shared.clinic.append("腳科")
+                        threeFloor.append("腳科")
                     }
                 } else if(confirm.description == "2") {
-                    if(UserPreferences.shared.clinic.contains("腿科")) {
-                        UserPreferences.shared.clinic.removeAll(where: { $0 == "腿科" })
+                    if((threeFloor.contains("腿科"))) {
+                        threeFloor.removeAll(where: { $0 == "腿科" })
                     } else {
-                        UserPreferences.shared.clinic.append("腿科")
+                        threeFloor.append("腿科")
                     }
                 }
             } backAction: {

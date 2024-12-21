@@ -27,3 +27,16 @@ struct BaseReponse: Codable {
     
     var message: String
 }
+
+struct measureReponse: Codable {
+
+    var measure: Measure
+    var result: Int
+}
+
+struct Measure: Codable {
+   
+    var temperature: Double
+    
+    var pulse: Int
+}

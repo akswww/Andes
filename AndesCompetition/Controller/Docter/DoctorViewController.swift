@@ -21,6 +21,7 @@ class DoctorViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationbarGradientColor()
         setupAnimate()
         self.title = "看診系統"
         registerTb.delegate = self
@@ -36,6 +37,7 @@ class DoctorViewController: BaseViewController {
         UserData.append(user1)
         UserData.append(user2)
         navigationItem.hidesBackButton = true
+    
     }
  
     func setupAnimate() {

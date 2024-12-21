@@ -12,12 +12,7 @@
 		3F0A5C992D0AE1BA0022001E /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A5C962D0AE1BA0022001E /* PatientViewController.swift */; };
 		3F0A5CFA2D0C153A0022001E /* ScanQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A5CF82D0C153A0022001E /* ScanQRCodeViewController.swift */; };
 		3F0A5CFB2D0C153A0022001E /* ScanQRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F0A5CF92D0C153A0022001E /* ScanQRCodeViewController.xib */; };
-		3F0A5CFF2D10022B0022001E /* server.pem in Resources */ = {isa = PBXBuildFile; fileRef = 3F0A5CFE2D10022B0022001E /* server.pem */; };
-		3F0A5D012D1002E40022001E /* fullchain6.pem in Resources */ = {isa = PBXBuildFile; fileRef = 3F0A5D002D1002E40022001E /* fullchain6.pem */; };
-		3F0A5D032D1002FA0022001E /* privkey6.pem in Resources */ = {isa = PBXBuildFile; fileRef = 3F0A5D022D1002FA0022001E /* privkey6.pem */; };
 		3F19B9AE2C3E6DA400CDE7BE /* NFCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19B9AB2C3E6DA400CDE7BE /* NFCViewController.swift */; };
-		3F46BE872C73243100EDE99F /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46BE862C73243100EDE99F /* Login.swift */; };
-		3F46BE892C73243E00EDE99F /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46BE882C73243E00EDE99F /* Register.swift */; };
 		3F48B1742C90547800F1D81E /* DoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F48B1722C90547800F1D81E /* DoctorViewController.swift */; };
 		3F48B1752C90547800F1D81E /* DoctorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F48B1732C90547800F1D81E /* DoctorViewController.xib */; };
 		3F48B1792C90556F00F1D81E /* DoctorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F48B1772C90556F00F1D81E /* DoctorTableViewCell.swift */; };
@@ -25,8 +20,14 @@
 		3F48B18F2C92C66300F1D81E /* DotBackgroundAnimate1.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F48B18E2C92C66300F1D81E /* DotBackgroundAnimate1.json */; };
 		3F5E95E42D0851840052055B /* PhoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E95E22D0851840052055B /* PhoteViewController.swift */; };
 		3F5E95E52D0851840052055B /* PhoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E95E32D0851840052055B /* PhoteViewController.xib */; };
+		3F67EB3A2D12EDE100A4C0E2 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67EB382D12EDE100A4C0E2 /* UserInfo.swift */; };
+		3F67EB3B2D12EDE100A4C0E2 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67EB362D12EDE100A4C0E2 /* Path.swift */; };
+		3F67EB3C2D12EDE100A4C0E2 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67EB352D12EDE100A4C0E2 /* Login.swift */; };
+		3F67EB3D2D12EDE100A4C0E2 /* Clinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67EB342D12EDE100A4C0E2 /* Clinic.swift */; };
+		3F67EB3E2D12EDE100A4C0E2 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67EB372D12EDE100A4C0E2 /* Register.swift */; };
+		3F67EB442D12EEB200A4C0E2 /* medical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67EB432D12EEB200A4C0E2 /* medical.swift */; };
+		3F67EB462D12F74C00A4C0E2 /* NFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67EB452D12F74C00A4C0E2 /* NFC.swift */; };
 		3F6E072E2C9D5BBC00EBD18B /* JOSESwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3F6E072D2C9D5BBC00EBD18B /* JOSESwift */; };
-		3F7106D02C771D2B0071F5C4 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7106CF2C771D2B0071F5C4 /* UserInfo.swift */; };
 		3F7107332C7D97740071F5C4 /* MainUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7107302C7D97740071F5C4 /* MainUserViewController.swift */; };
 		3F74D0272C845C4A001BACEE /* ChartXAxisFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74D0262C845C4A001BACEE /* ChartXAxisFormatter.swift */; };
 		3F8AAE982C3F8EE700D51C2D /* CoreNFCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8AAE972C3F8EE700D51C2D /* CoreNFCManager.swift */; };
@@ -45,6 +46,8 @@
 		3FC4D22C2C32F42700199D6E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4D22B2C32F42700199D6E /* String+Extension.swift */; };
 		3FC4D22E2C32F54100199D6E /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4D22D2C32F54100199D6E /* Encodable+Extension.swift */; };
 		3FD0ED8E2C34510F0046DA6B /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0ED8D2C34510F0046DA6B /* Color+Extension.swift */; };
+		3FD7BCEB2D1517BC00138F2A /* EncrypViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7BCE92D1517BC00138F2A /* EncrypViewController.swift */; };
+		3FD7BCEC2D1517BC00138F2A /* EncrypViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD7BCEA2D1517BC00138F2A /* EncrypViewController.xib */; };
 		3FDAD7BF2C92C78D00E7728A /* AIMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FDAD7BE2C92C78D00E7728A /* AIMapViewController.xib */; };
 		3FDAD7C02C92C78D00E7728A /* AIMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDAD7BD2C92C78D00E7728A /* AIMapViewController.swift */; };
 		3FDAD7D42C98014000E7728A /* jose-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 3FDAD7D32C98014000E7728A /* jose-swift */; };
@@ -107,14 +110,9 @@
 		3F0A5C972D0AE1BA0022001E /* PatientViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientViewController.xib; sourceTree = "<group>"; };
 		3F0A5CF82D0C153A0022001E /* ScanQRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeViewController.swift; sourceTree = "<group>"; };
 		3F0A5CF92D0C153A0022001E /* ScanQRCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanQRCodeViewController.xib; sourceTree = "<group>"; };
-		3F0A5CFE2D10022B0022001E /* server.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = server.pem; sourceTree = "<group>"; };
-		3F0A5D002D1002E40022001E /* fullchain6.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = fullchain6.pem; sourceTree = "<group>"; };
-		3F0A5D022D1002FA0022001E /* privkey6.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = privkey6.pem; sourceTree = "<group>"; };
 		3F19B9AB2C3E6DA400CDE7BE /* NFCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCViewController.swift; sourceTree = "<group>"; };
 		3F19B9AC2C3E6DA400CDE7BE /* NFCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NFCViewController.xib; sourceTree = "<group>"; };
 		3F19B9AF2C3E6FBE00CDE7BE /* AndesCompetition.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AndesCompetition.entitlements; sourceTree = "<group>"; };
-		3F46BE862C73243100EDE99F /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		3F46BE882C73243E00EDE99F /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		3F48B1722C90547800F1D81E /* DoctorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorViewController.swift; sourceTree = "<group>"; };
 		3F48B1732C90547800F1D81E /* DoctorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoctorViewController.xib; sourceTree = "<group>"; };
 		3F48B1772C90556F00F1D81E /* DoctorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorTableViewCell.swift; sourceTree = "<group>"; };
@@ -122,7 +120,13 @@
 		3F48B18E2C92C66300F1D81E /* DotBackgroundAnimate1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = DotBackgroundAnimate1.json; path = "../../../Smart Healthcare App/Smart Healthcare App/Resource/DotBackgroundAnimate1.json"; sourceTree = "<group>"; };
 		3F5E95E22D0851840052055B /* PhoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoteViewController.swift; sourceTree = "<group>"; };
 		3F5E95E32D0851840052055B /* PhoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoteViewController.xib; sourceTree = "<group>"; };
-		3F7106CF2C771D2B0071F5C4 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		3F67EB342D12EDE100A4C0E2 /* Clinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
+		3F67EB352D12EDE100A4C0E2 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		3F67EB362D12EDE100A4C0E2 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		3F67EB372D12EDE100A4C0E2 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		3F67EB382D12EDE100A4C0E2 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		3F67EB432D12EEB200A4C0E2 /* medical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = medical.swift; sourceTree = "<group>"; };
+		3F67EB452D12F74C00A4C0E2 /* NFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFC.swift; sourceTree = "<group>"; };
 		3F7107302C7D97740071F5C4 /* MainUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUserViewController.swift; sourceTree = "<group>"; };
 		3F7107312C7D97740071F5C4 /* MainUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainUserViewController.xib; sourceTree = "<group>"; };
 		3F74D0262C845C4A001BACEE /* ChartXAxisFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartXAxisFormatter.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 		3FC4D22B2C32F42700199D6E /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		3FC4D22D2C32F54100199D6E /* Encodable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
 		3FD0ED8D2C34510F0046DA6B /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		3FD7BCE92D1517BC00138F2A /* EncrypViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncrypViewController.swift; sourceTree = "<group>"; };
+		3FD7BCEA2D1517BC00138F2A /* EncrypViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EncrypViewController.xib; sourceTree = "<group>"; };
 		3FDAD7BD2C92C78D00E7728A /* AIMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMapViewController.swift; sourceTree = "<group>"; };
 		3FDAD7BE2C92C78D00E7728A /* AIMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AIMapViewController.xib; sourceTree = "<group>"; };
 		3FDF37DF2C32FA12000F6D6C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -233,16 +239,6 @@
 			path = ScanQR;
 			sourceTree = "<group>";
 		};
-		3F46BE852C73242100EDE99F /* API */ = {
-			isa = PBXGroup;
-			children = (
-				3F46BE862C73243100EDE99F /* Login.swift */,
-				3F46BE882C73243E00EDE99F /* Register.swift */,
-				3F7106CF2C771D2B0071F5C4 /* UserInfo.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 		3F48B1702C90544000F1D81E /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +274,20 @@
 				3F5E95E32D0851840052055B /* PhoteViewController.xib */,
 			);
 			path = takePhote;
+			sourceTree = "<group>";
+		};
+		3F67EB422D12EE0200A4C0E2 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3F67EB342D12EDE100A4C0E2 /* Clinic.swift */,
+				3F67EB352D12EDE100A4C0E2 /* Login.swift */,
+				3F67EB362D12EDE100A4C0E2 /* Path.swift */,
+				3F67EB372D12EDE100A4C0E2 /* Register.swift */,
+				3F67EB382D12EDE100A4C0E2 /* UserInfo.swift */,
+				3F67EB432D12EEB200A4C0E2 /* medical.swift */,
+				3F67EB452D12F74C00A4C0E2 /* NFC.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		3F71072F2C7D97660071F5C4 /* Audio */ = {
@@ -367,9 +377,6 @@
 				3F48B18E2C92C66300F1D81E /* DotBackgroundAnimate1.json */,
 				3FFD2AF12C560E350041CF03 /* DotBackgroundAnimate.json */,
 				3FC4D1F12C32EF4D00199D6E /* Assets.xcassets */,
-				3F0A5D002D1002E40022001E /* fullchain6.pem */,
-				3F0A5D022D1002FA0022001E /* privkey6.pem */,
-				3F0A5CFE2D10022B0022001E /* server.pem */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -414,6 +421,8 @@
 				3FFD2AE62C5602A40041CF03 /* UserInfo */,
 				3FA2386B2C4F8ECB00D3D840 /* NFC */,
 				3FA2386A2C4F5C7600D3D840 /* Login */,
+				3FD7BCE92D1517BC00138F2A /* EncrypViewController.swift */,
+				3FD7BCEA2D1517BC00138F2A /* EncrypViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -421,7 +430,7 @@
 		3FC4D2202C32F36300199D6E /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
-				3F46BE852C73242100EDE99F /* API */,
+				3F67EB422D12EE0200A4C0E2 /* API */,
 				3FC4D2222C32F37300199D6E /* NetworkConstants.swift */,
 				3FC4D2212C32F37300199D6E /* NetworkManager.swift */,
 				3FC4D2232C32F37300199D6E /* SingletonOfPatient.swift */,
@@ -632,17 +641,15 @@
 				3FA156222CBBAA8100959CB4 /* Assets.xcassets in Resources */,
 				3FE0BC442C846C3B00D2D7D7 /* UserInfoViewController.xib in Resources */,
 				3FDAD7BF2C92C78D00E7728A /* AIMapViewController.xib in Resources */,
-				3F0A5D032D1002FA0022001E /* privkey6.pem in Resources */,
 				3FE0BC452C846C3B00D2D7D7 /* NFCViewController.xib in Resources */,
-				3F0A5CFF2D10022B0022001E /* server.pem in Resources */,
 				3F48B18F2C92C66300F1D81E /* DotBackgroundAnimate1.json in Resources */,
 				3F5E95E52D0851840052055B /* PhoteViewController.xib in Resources */,
+				3FD7BCEC2D1517BC00138F2A /* EncrypViewController.xib in Resources */,
 				3FE0BC462C846C3B00D2D7D7 /* MainViewController.xib in Resources */,
 				3F48B17A2C90556F00F1D81E /* DoctorTableViewCell.xib in Resources */,
 				3F48B1752C90547800F1D81E /* DoctorViewController.xib in Resources */,
 				3FE0BC472C846C3B00D2D7D7 /* TabbarViewController.xib in Resources */,
 				3F0A5C982D0AE1BA0022001E /* PatientViewController.xib in Resources */,
-				3F0A5D012D1002E40022001E /* fullchain6.pem in Resources */,
 				3FE0BC402C84601200D2D7D7 /* MainUserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -757,7 +764,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F46BE872C73243100EDE99F /* Login.swift in Sources */,
 				3FC4D2262C32F37300199D6E /* SingletonOfPatient.swift in Sources */,
 				3FC4D22C2C32F42700199D6E /* String+Extension.swift in Sources */,
 				3FFE38E52C634B1B00BE35CF /* TabbarViewController.swift in Sources */,
@@ -766,24 +772,30 @@
 				3F7107332C7D97740071F5C4 /* MainUserViewController.swift in Sources */,
 				3F19B9AE2C3E6DA400CDE7BE /* NFCViewController.swift in Sources */,
 				3F48B1742C90547800F1D81E /* DoctorViewController.swift in Sources */,
-				3F7106D02C771D2B0071F5C4 /* UserInfo.swift in Sources */,
 				3F0A5C992D0AE1BA0022001E /* PatientViewController.swift in Sources */,
 				3FDF37E02C32FA12000F6D6C /* BaseViewController.swift in Sources */,
 				3FC4D2242C32F37300199D6E /* NetworkManager.swift in Sources */,
+				3F67EB3C2D12EDE100A4C0E2 /* Login.swift in Sources */,
+				3F67EB3E2D12EDE100A4C0E2 /* Register.swift in Sources */,
 				3F74D0272C845C4A001BACEE /* ChartXAxisFormatter.swift in Sources */,
 				3F48B1792C90556F00F1D81E /* DoctorTableViewCell.swift in Sources */,
+				3F67EB3A2D12EDE100A4C0E2 /* UserInfo.swift in Sources */,
+				3F67EB462D12F74C00A4C0E2 /* NFC.swift in Sources */,
 				3FC4D22E2C32F54100199D6E /* Encodable+Extension.swift in Sources */,
 				3FDF37E22C32FAD7000F6D6C /* AlphaBackgroundView.swift in Sources */,
+				3FD7BCEB2D1517BC00138F2A /* EncrypViewController.swift in Sources */,
 				3F0A5CFA2D0C153A0022001E /* ScanQRCodeViewController.swift in Sources */,
 				3FFD2AEA2C5602D20041CF03 /* UserInfoViewController.swift in Sources */,
 				3FFE38DB2C62233000BE35CF /* ImageButtonView.swift in Sources */,
-				3F46BE892C73243E00EDE99F /* Register.swift in Sources */,
 				3FC4D21A2C32EFC800199D6E /* MainViewController.swift in Sources */,
 				3FDAD7C02C92C78D00E7728A /* AIMapViewController.swift in Sources */,
+				3F67EB442D12EEB200A4C0E2 /* medical.swift in Sources */,
 				3FE0BC492C88406A00D2D7D7 /* AudioManager.swift in Sources */,
+				3F67EB3D2D12EDE100A4C0E2 /* Clinic.swift in Sources */,
 				3FC4D2252C32F37300199D6E /* NetworkConstants.swift in Sources */,
 				3FFD2AEF2C56030B0041CF03 /* UserInfoTableViewCell.swift in Sources */,
 				3FFE38D72C62162C00BE35CF /* CustomTabBarView.swift in Sources */,
+				3F67EB3B2D12EDE100A4C0E2 /* Path.swift in Sources */,
 				3FC4D2292C32F3A500199D6E /* UserPreference.swift in Sources */,
 				3F5E95E42D0851840052055B /* PhoteViewController.swift in Sources */,
 				3FC4D1E92C32EF4B00199D6E /* AppDelegate.swift in Sources */,
@@ -961,7 +973,10 @@
 				INFOPLIST_KEY_NFCReaderUsageDescription = "我們需要使用NFC來讀取卡片資訊";
 				INFOPLIST_KEY_NSCameraUsageDescription = "需要使用相機來拍照";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "我們需要使用 Face ID 來快速驗證您的身份。";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "飲食日記將取用您的位置來儲存照片之拍攝地點。";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "我們需要使用您的位置來提供導航功能";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要啟動麥克風";
+				INFOPLIST_KEY_NSMotionUsageDescription = "本 App 需要存取您的動作與健身資料，以計算步數與距離。";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "需要啟動麥克風";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1001,7 +1016,10 @@
 				INFOPLIST_KEY_NFCReaderUsageDescription = "我們需要使用NFC來讀取卡片資訊";
 				INFOPLIST_KEY_NSCameraUsageDescription = "需要使用相機來拍照";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "我們需要使用 Face ID 來快速驗證您的身份。";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "飲食日記將取用您的位置來儲存照片之拍攝地點。";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "我們需要使用您的位置來提供導航功能";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要啟動麥克風";
+				INFOPLIST_KEY_NSMotionUsageDescription = "本 App 需要存取您的動作與健身資料，以計算步數與距離。";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "需要啟動麥克風";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

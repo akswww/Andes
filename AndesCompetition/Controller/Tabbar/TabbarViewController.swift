@@ -26,7 +26,6 @@ class TabbarViewController: BaseViewController {
         
         // 預設進來的頁面是第 1 頁
         updateView(index: 0)
-        
         setupUI()
         setupAnimate()
     }
